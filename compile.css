@@ -18,7 +18,8 @@ aside {
   width: 35%;
   color: #3485DA;
   font-family: fantasy;
-  font-size: 20px; }
+  font-size: 20px;
+  height: 500px; }
   aside form {
     display: flex;
     align-items: flex-end;
@@ -32,10 +33,12 @@ section {
   flex-direction: column;
   margin: 0 auto;
   color: #5b4755;
-  font-family: fantasy; }
+  font-family: fantasy;
+  height: 500px;
+  overflow: hidden; }
   section form {
     display: flex;
-    align-items: flex-end; }
+    align-items: stretch; }
 
 input {
   color: white;

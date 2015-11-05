@@ -1,4 +1,6 @@
 
+
+
 var userId;
 var dataID;
 var loadMessages;
@@ -7,8 +9,8 @@ var page = {
   userArr: [],
   messArr: [],
   currUser: '',
-  usersUrl: "http://tiny-tiny.herokuapp.com/collections/hopper",
-  messagesUrl: "http://tiny-tiny.herokuapp.com/collections/hopper-messages",
+  usersUrl: "http://tiny-tiny.herokuapp.com/collections/hopper12",
+  messagesUrl: "http://tiny-tiny.herokuapp.com/collections/hopper-messages12",
 
   init: function(){
     page.editUser();
@@ -33,7 +35,6 @@ var page = {
     page.editUserf();
   },
   stylesInit: function(){
-
     _.each(page.userArr, function(el){
         if(page.currUser === el._id){
           userId = el.user;
@@ -69,8 +70,8 @@ var page = {
         var newUsername = $(this).text();
         var userData = {user:newUsername};
         var userID = $(this).closest('p').data(userID);
+        console.log(userID.userid)
         event.preventDefault();
-
         $.ajax({
           method:'PUT',
           url: page.usersUrl + "/" + userID.userid,
@@ -105,7 +106,6 @@ var page = {
     event.preventDefault();
       });
   },
-
   postMessage: function(){
     $('.messageForm').on('submit', function(event){
       var messageData = {
@@ -133,8 +133,6 @@ var page = {
       success: function(messagesArr){
         messagesArr.reverse();
         loadMessages = '';
-
-
         page.messArr = messagesArr;
         _.each(messagesArr, function(el, idx){
           loadMessages += "<li data-dataID="+ el._id +">" + el.message + ": " + el.author + '</br>' + "</li>";
@@ -164,9 +162,6 @@ getUsernames: function(){
       },
     });
   },
-
-
-
 };
 $(document).ready(function(){
  page.init();

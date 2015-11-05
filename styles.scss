@@ -19,6 +19,7 @@ aside{
   color: #3485DA;
   font-family: fantasy;
   font-size: 20px;
+  height: 500px;
   form {
     display: flex;
     align-items: flex-end;
@@ -34,9 +35,11 @@ section{
   margin: 0 auto;
   color: #5b4755;
   font-family: fantasy;
+  height: 500px;
+  overflow: hidden;
   form {
     display: flex;
-    align-items: flex-end;
+    align-items: stretch;
   }
 }
 
