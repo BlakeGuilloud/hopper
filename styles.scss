@@ -20,6 +20,7 @@ aside{
   font-family: fantasy;
   font-size: 20px;
   height: 500px;
+  overflow: scroll;
   form {
     display: flex;
     align-items: flex-end;
@@ -36,7 +37,7 @@ section{
   color: #5b4755;
   font-family: fantasy;
   height: 500px;
-  overflow: hidden;
+  overflow: scroll;
   form {
     display: flex;
     align-items: stretch;
@@ -89,7 +90,7 @@ li{
   .container{
     display: flex;
     flex-direction: column-reverse;
-    width: 300px;
+    width: 500px;
   }
   section, aside{
     width: 100%;

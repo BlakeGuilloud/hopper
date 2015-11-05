@@ -19,7 +19,8 @@ aside {
   color: #3485DA;
   font-family: fantasy;
   font-size: 20px;
-  height: 500px; }
+  height: 500px;
+  overflow: scroll; }
   aside form {
     display: flex;
     align-items: flex-end;
@@ -35,7 +36,7 @@ section {
   color: #5b4755;
   font-family: fantasy;
   height: 500px;
-  overflow: hidden; }
+  overflow: scroll; }
   section form {
     display: flex;
     align-items: stretch; }
@@ -77,7 +78,7 @@ li {
   .container {
     display: flex;
     flex-direction: column-reverse;
-    width: 300px; }
+    width: 500px; }
 
   section, aside {
     width: 100%; } }

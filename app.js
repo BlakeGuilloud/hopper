@@ -1,6 +1,3 @@
-
-
-
 var userId;
 var dataID;
 var loadMessages;
@@ -9,8 +6,8 @@ var page = {
   userArr: [],
   messArr: [],
   currUser: '',
-  usersUrl: "http://tiny-tiny.herokuapp.com/collections/hopper12",
-  messagesUrl: "http://tiny-tiny.herokuapp.com/collections/hopper-messages12",
+  usersUrl: "http://tiny-tiny.herokuapp.com/collections/hopper-user",
+  messagesUrl: "http://tiny-tiny.herokuapp.com/collections/hopper-messages",
 
   init: function(){
     page.editUser();
@@ -135,7 +132,7 @@ var page = {
         loadMessages = '';
         page.messArr = messagesArr;
         _.each(messagesArr, function(el, idx){
-          loadMessages += "<li data-dataID="+ el._id +">" + el.message + ": " + el.author + '</br>' + "</li>";
+          loadMessages += "<li data-dataID="+ el._id +">" + el.author + ": " + el.message + '</br>' + "</li>";
           if(userId === el.author){
             loadMessages += '<button class="delete-'+ idx + ' hidden">Delete</button>';
           }
